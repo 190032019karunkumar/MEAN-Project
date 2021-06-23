@@ -1,0 +1,24 @@
+<div class="hj">
+    <mat-toolbar style="background-color:#0bbdf3ad ;">
+     
+        <div style="margin-left: 0;padding: 0 4em 1em 0;">
+            <div class = "nav-area">
+                <ul>
+                    <li><nav><a style="color:white; font: bold; font-size: larger;">E-Commerce Website</a></nav></li>
+                     <li><nav><a routerLink = "../" routerLinkActive = "active" style="color: black;">Home</a></nav> </li>
+                    <li><nav><a routerLink = "/products" routerLinkActive = "active" style="color: black;"> Products</a> </nav></li>
+                    <li> <nav> <a routerLink = "/login" style="padding-left: 100px"  *ngIf="! getLoginIn()" routerLinkActive = "active" style="color: black;"> login</a> </nav> </li>
+                    <li><nav><a routerLink = "/mycart" style="cursor:pointer" *ngIf=" getLoginIn()"  routerLinkActive = "active" style="color: black;">mycart</a> </nav></li>
+                    <li><nav><a routerLink = "/myprofile" style="cursor:pointer" *ngIf=" getLoginIn()"  routerLinkActive = "active" style="color: black;"> myprofile</a> </nav></li>    
+                    <li><nav><a  routerLink = "/login" style="cursor:pointer ;" *ngIf=" getLoginIn()" (click)=" getLoginout()" routerLinkActive = "active" style="color: black;"> Logout</a> </nav></li>
+                </ul>
+               </div>
+            </div>
+     
+      
+    </mat-toolbar>
+</div>
+
+
+    
+     

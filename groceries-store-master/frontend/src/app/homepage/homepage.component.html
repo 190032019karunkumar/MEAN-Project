@@ -1,0 +1,44 @@
+<div class="hero-imag"></div>
+
+
+<div style="color: wheat; text-align: center; padding-top: 20px ; padding-bottom: 20px;">
+  <h1 > Welcome to Ecommerce store </h1>
+  <h3>Buy groceries from Home</h3> 
+  <nav><a routerLink = "/products">
+  <button  type="button"  class="btn btn-primary " style="padding-right: 50px; padding-left:50px; color: black; 
+  background-color: rgb(236, 132, 13);"> BUY NOW</button>
+  </a></nav>
+</div >
+<div style="padding-bottom: 40px ;">
+ 
+     <mat-card class="example-card" >
+        
+        <mat-card-content>
+          <nav>
+            <a routerLink = "/products" routerLinkActive = "active">
+            <table class="table">
+            <tr *ngFor = "let product of contracts  let i=index">
+              <div *ngIf="i < 3">
+               <td><img mat-card-image style ="height: 2cm; width:3cm;"  src ="{{product.pic}}" alt="Photo of "></td>
+               <td><h6 style="font:bold">{{product.name}}</h6></td> 
+             <td> <h6 style="font:bold">&#8377; {{product.price}} </h6></td> 
+            </div>
+            </tr>
+          </table>
+        </a>
+      </nav>
+<div style="padding-left: 100px; padding-right: 130px ;">
+  <nav>
+    <a routerLink="/products" routerLinkActive="active">
+      <h2 style="margin-left: 2.5em;padding: 20px 20px 20px 10px;border-width: 5px; border-color:rgb(223, 186, 19);
+          border-style:solid;text-align: center; font-size: larger; color: rgb(223, 186, 19)">
+        VIEW ALL</h2>
+    </a>
+  </nav>
+</div>
+          </mat-card-content>
+      </mat-card>
+ 
+  </div>
+
+ 

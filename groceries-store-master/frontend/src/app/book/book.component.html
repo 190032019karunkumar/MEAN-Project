@@ -1,0 +1,57 @@
+
+<div class="hero-imag">
+    <div style="padding-left: 250px; padding-top: 40px;">
+  <div class="py-5" style="width: 850px; height: 600px; ">
+    <div class="row">
+      <div class="col-md-6 mx-auto">
+        <span class="anchor" id="formLogin"></span>
+  
+        <!-- form card login -->
+        <div class="card rounded-0">
+          <div class="card-header">
+            <h3 class="mb-0">BOOK YOUR PRODUCT</h3>
+          </div>
+          <div class="card-body">
+            <form class="form" [formGroup]="myForm">
+              <div class="form-group">
+                <label for="uname1">Address</label>
+                <input formControlName="Adress" name ="Adress" type="text"  
+                 class="form-control rounded-0" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="uname1">No of products needed ?</label>
+                <input formControlName="No" name ="No" type="tel"   class="form-control rounded-0" >
+              </div>
+              <div class="form-group">
+                <label for="uname1">email</label>
+                <input formControlName="email" name ="email"type="text"   class="form-control rounded-0"  required>
+              </div>
+             
+              <div class="form-group">
+                <label for="uname1">phone</label>
+                <input formControlName="phone" name ="phone" type="tel"   class="form-control rounded-0" >
+              </div>
+              <button (click) = "booking()" type="button"  class="btn btn-primary float-right">Book</button>
+            </form>
+          </div>
+          <!--/card-block-->
+        </div>
+        <!-- /form card login -->
+  
+      </div>
+  
+    </div>
+    </div>
+  </div>
+  </div>
+  <div style="color: white; padding-top: 20px; text-align: center ; padding-bottom: 50px;"  >
+  <h3>**If u did not pay ur booking won't be valid </h3>
+</div>
+<div style="padding-bottom:100px ; padding-left: 600px;" >
+  <nav><a routerLink = '/payment'>
+  <button  class="btn btn-primary;  " style=" color: black ; background-color: orange;">
+   PAY NOW
+  </button>
+</a></nav>
+</div>

@@ -1,0 +1,31 @@
+
+
+<p style="color: rgb(221, 233, 233); padding-top: 10px ; padding-left: 1100px;">PRICE: &#8377;{{total}} </p>
+<p style="color: rgb(221, 233, 233);  padding-left: 1100px;">ITEMS: {{length}} </p>
+<div class = "">
+  <mat-grid-list cols= 4 #grid rowHeight="400px" gutterSize="40px">
+    <mat-grid-tile *ngFor ="let product of store">
+      
+      <mat-card class="example-card">
+       <mat-card-header>
+         <mat-card-title><h6> {{product.name}} </h6></mat-card-title>
+       </mat-card-header>
+       <img mat-card-image style ="height: 4cm; width:8.3cm;"  src ="{{product.pic}}" alt="Photo of ">
+       <mat-card-content>
+          <h6> price : &#8377; {{product.price}} </h6>
+         </mat-card-content>
+       <mat-card-actions>
+        <div class="example-button-row" style="padding-bottom: 10px;">
+        
+         <button mat-flat-button (click)=" remove(product)" style = " margin-left: 5px; padding-left:5px; padding-right: 5px;background-color: rgb(224, 222, 214);color: black;">REMOVE</button>
+         <a routerLink = "/book"> <button class="nav" mat-flat-button (click)="idid(product)" style=" margin-left: 5px; padding-left:5px; padding-right: 5px;background-color: rgb(226, 224, 212);color: black;">BUY</button>  </a>
+        
+        </div>
+       </mat-card-actions>
+     </mat-card>
+     
+ 
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
+

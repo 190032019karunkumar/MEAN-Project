@@ -1,0 +1,66 @@
+<div  align = center  style="padding-top: 50px ;">
+<h3 style="color: wheat;"> SELECT YOUR PAYMENT MODE</h3>
+<div class="example-button-row" style="padding-top:  20px; padding-bottom:40px ;">
+          
+   <button  mat-flat-button (click)="ondelivery()" style=" margin-left: 5px; padding-left:5px; padding-right: 5px;background-color: rgb(226, 224, 212);color: black;"> cash on delivery</button> 
+         <button mat-flat-button (click)="UPI()" style = " margin-left: 5px; padding-left:5px; padding-right: 5px;background-color: rgb(224, 222, 214);color: black;">UPI</button>
+          <button mat-flat-button (click)="net()"style="margin-left: 5px; padding-left:5px; padding-right: 5px;background-color: rgb(226, 224, 212);color: black;">Debit/Credit/ATM</button> 
+        
+        </div>
+      </div>
+      <div  *ngIf = "upi" align = center >
+       <h3>your code is {{code}}</h3>
+      </div>
+      <div *ngIf> </div>
+<div *ngIf = "debit">
+    <div style="padding-left: 250px; padding-top: 40px;">
+  <div class="py-5" style="width: 850px; height: 600px; ">
+    <div class="row">
+      <div class="col-md-6 mx-auto">
+        <span class="anchor" id="formLogin"></span>
+  
+        <!-- form card login -->
+        <div class="card rounded-0">
+          <div class="card-header">
+            <h3 class="mb-0">PAYMENT DETAILS</h3>
+          </div>
+          <div class="card-body">
+            <form class="form" [formGroup]="myForm">
+              <div class="form-group">
+                <label for="uname1">DEBIT/CREDIT/ATM card no</label>
+                <input formControlName="Adress" name ="Adress" type="text"  
+                 class="form-control rounded-0" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="uname1">Card holder Name</label>
+                <input formControlName="No" name ="No" type="text"   class="form-control rounded-0" >
+              </div>
+              <div class="form-group">
+                <label for="uname1">Expire month and year</label>
+                <input formControlName="email" name ="email"type="text"   class="form-control rounded-0"  required>
+              </div>
+             
+              <div class="form-group">
+                <label for="uname1">cvv</label>
+                <input formControlName="phone" name ="phone" type="password"   class="form-control rounded-0" >
+              </div>
+              <button (click) = "booking()" type="button"  class="btn btn-primary float-right">Pay</button>
+            </form>
+          </div>
+          <!--/card-block-->
+        </div>
+        <!-- /form card login -->
+  
+      </div>
+  
+    </div>
+    </div>
+  </div>
+  </div>
+  <div *ngIf = "confirm">
+  <div style="color: white; padding-top: 20px; text-align: center ; padding-bottom: 50px;"  >
+  <h3>your product will be reached soon to you </h3>
+  <h3>Thanks for ecommerce</h3>
+</div>
+</div>
